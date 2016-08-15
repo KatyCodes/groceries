@@ -22,9 +22,15 @@ $(document).ready(function() {
     sortedCapitalInputs.forEach(function(sortedCapitalInput){
       $('ul').append("<li>" + sortedCapitalInput + "</li>");
     });
+    if ($("input#item1") === "") {
+      $("form").show();
+      $("#results").hide();
+    } else {
+      $("#results").show();
+      $("form").hide();
+    };
 
       });
 
-    $("#results").submit()
-    $("#results").show();
+
   });
