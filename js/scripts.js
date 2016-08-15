@@ -11,12 +11,18 @@ $(document).ready(function() {
     var capitalInputs = inputs.map(function(input){
       return input.toUpperCase();
     });
-
-
      console.log(capitalInputs);
-    //
-    // var sortedCapitalInputs = capitalInputs.sort();
-    //     console.log(sortedCapitalInputs);
+
+    var sortedCapitalInputs = capitalInputs.sort();
+        console.log(sortedCapitalInputs);
+
+    //loop through sortedCapitalInputs and display one at a time.
+    // grocery[0] can access first thing in loop
+
+    sortedCapitalInputs.forEach(function(sortedCapitalInput){
+      $('ul').append("<li>" + sortedCapitalInput + "</li>");
+    });
+
       });
 
     $("#results").submit()
